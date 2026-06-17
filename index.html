@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,298 +7,53 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mansi Portfolio</title>
-
-  <!-- CSS -->
+  <title>Modern Calculator</title>
 
   <link rel="stylesheet" href="style.css">
-
-  <!-- GOOGLE FONT -->
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- FONT AWESOME -->
-
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 </head>
 
 <body>
 
-  <!-- HERO SECTION -->
+  <div class="calculator">
 
-  <section class="hero-section">
+    <!-- DISPLAY -->
 
-    <!-- NAVBAR -->
+    <input type="text" id="display" readonly>
 
-    <nav>
+    <!-- BUTTONS -->
 
-      <div class="logo">
+    <div class="buttons">
 
-        <h2>Mansi Portfolio</h2>
+      <button onclick="clearDisplay()" class="operator">C</button>
+      <button onclick="deleteLast()" class="operator">DEL</button>
+      <button onclick="appendValue('%')" class="operator">%</button>
+      <button onclick="appendValue('/')" class="operator">÷</button>
 
-        <p>Frontend Developer</p>
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue('*')" class="operator">×</button>
 
-      </div>
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('-')" class="operator">−</button>
 
-      <ul>
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="appendValue('+')" class="operator">+</button>
 
-        <li><a href="#">Home</a></li>
-
-        <li><a href="#about">About</a></li>
-
-        <li><a href="#skills">Skills</a></li>
-
-        <li><a href="#projects">Projects</a></li>
-
-        <li><a href="#contact">Contact</a></li>
-
-      </ul>
-
-    </nav>
-
-    <!-- HERO -->
-
-    <div class="hero">
-
-      <div class="hero-text">
-
-        <h1>I'm <span class="typing"></span></h1>
-
-        <p>
-          Frontend developer and web development learner.
-          I create modern, responsive and stylish websites
-          using HTML, CSS, JavaScript and Laravel.
-        </p>
-
-        <div class="hero-buttons">
-
-          <button onclick="showMessage()">Hire Me</button>
-          <p id="hireMessage" class="hire-message"></p>
-
-          <a href="C:\Users\USER\OneDrive\Documents\personal space\CV_2026052815061895.pdf" download>
-            Download CV
-          </a>
-
-        </div>
-
-        <!-- SOCIAL ICONS -->
-
-        <div class="social-icons">
-
-          <a href="#"><i class="fab fa-github"></i></a>
-
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-
-          <a href="#"><i class="fab fa-instagram"></i></a>
-
-        </div>
-
-      </div>
+      <button onclick="appendValue('0')" class="zero">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button onclick="calculate()" class="equal">=</button>
 
     </div>
 
-  </section>
+  </div>
 
-  <!-- ABOUT SECTION -->
-
-  <section class="about-section" id="about">
-
-    <div class="about-text">
-
-      <h2>ABOUT ME</h2>
-
-      <div class="line"></div>
-
-      <p>
-        I am passionate about web development and modern
-        website design. I enjoy learning frontend
-        technologies and creating clean user interfaces.
-      </p>
-
-      <p>
-        Currently improving my skills in HTML, CSS,
-        JavaScript, Python, Database and Laravel.
-      </p>
-
-      <a href="C:\Users\USER\OneDrive\Documents\personal space\CV_2026052815061895.pdf" download>
-        DOWNLOAD RESUME
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- SKILLS -->
-
-  <section class="skills-section" id="skills">
-
-    <h2>MY SKILLS</h2>
-
-    <div class="skills-container">
-
-      <div class="skill-card">
-        <h3>HTML</h3>
-      </div>
-
-      <div class="skill-card">
-        <h3>CSS</h3>
-      </div>
-
-      <div class="skill-card">
-        <h3>JavaScript</h3>
-      </div>
-
-      <div class="skill-card">
-        <h3>Python</h3>
-      </div>
-
-      <div class="skill-card">
-        <h3>Database</h3>
-      </div>
-
-      <div class="skill-card">
-        <h3>Laravel</h3>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- PROJECTS -->
-
-  <section class="projects-section" id="projects">
-
-    <h2>PROJECTS</h2>
-
-    <div class="projects-container">
-
-      <div class="project-card">
-
-        <h3>Portfolio Website</h3>
-
-        <p>
-          Modern responsive portfolio website
-          using HTML and CSS.
-        </p>
-
-      </div>
-
-      <div class="project-card">
-
-        <h3>Organ Donation System</h3>
-
-        <p>
-          Web based application developed using
-          HTML, CSS, JavaScript, Database and Laravel.
-          This project helps manage organ donation
-          requests and donor information efficiently.
-        </p>
-
-      </div>
-
-      <div class="project-card">
-
-        <h3>Mental Health Awareness</h3>
-
-        <p>
-          A web application created using
-          HTML, CSS, JavaScript, Database and Laravel
-          to spread awareness about mental health
-          and provide helpful resources.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-
-  <section class="contact-section" id="contact">
-
-    <h2>CONTACT ME</h2>
-
-    <div class="contact-line"></div>
-
-    <div class="contact-info">
-
-      <p>
-        <i class="fas fa-envelope"></i>
-        Email: jadhavmansi115@gmail.com
-      </p>
-
-      <p>
-        <i class="fas fa-phone"></i>
-        Phone: +91 7414903826
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <p>
-      © 2026 Mansi Portfolio | All Rights Reserved
-    </p>
-
-  </footer>
-
-  <!-- TYPING EFFECT -->
-
-  <script>
-    
-
-function showMessage(){
-
-  const msg = document.getElementById("hireMessage");
-
-  msg.innerHTML =
-  "Thank you for your interest! Please contact me at 📧 jadhavmansi115@gmail.com or 📞 +91 7414903826";
-
-  msg.classList.add("show");
-
-}
-
-
-
-    const texts = ["Mansi", "Frontend Developer", "Web Designer"];
-
-    let count = 0;
-    let index = 0;
-    let currentText = "";
-    let letter = "";
-
-    (function type(){
-
-      if(count === texts.length){
-        count = 0;
-      }
-
-      currentText = texts[count];
-
-      letter = currentText.slice(0, ++index);
-
-      document.querySelector(".typing").textContent = letter;
-
-      if(letter.length === currentText.length){
-
-        count++;
-
-        index = 0;
-
-      }
-
-      setTimeout(type, 150);
-
-    })();
-
-  </script>
+  <script src="script.js"></script>
 
 </body>
 
