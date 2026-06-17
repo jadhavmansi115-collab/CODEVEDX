@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
 <html lang="en">
 
 <head>
@@ -7,53 +7,139 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Modern Calculator</title>
+  <title>Job Board</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- GOOGLE FONT -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <div class="calculator">
+  <!-- NAVBAR -->
 
-    <!-- DISPLAY -->
+  <nav>
 
-    <input type="text" id="display" readonly>
+    <div class="logo">
+      JobBoard
+    </div>
 
-    <!-- BUTTONS -->
+    <ul>
 
-    <div class="buttons">
+      <li><a href="index.html">Home</a></li>
 
-      <button onclick="clearDisplay()" class="operator">C</button>
-      <button onclick="deleteLast()" class="operator">DEL</button>
-      <button onclick="appendValue('%')" class="operator">%</button>
-      <button onclick="appendValue('/')" class="operator">÷</button>
+      <li><a href="jobs.html">Jobs</a></li>
 
-      <button onclick="appendValue('7')">7</button>
-      <button onclick="appendValue('8')">8</button>
-      <button onclick="appendValue('9')">9</button>
-      <button onclick="appendValue('*')" class="operator">×</button>
+      <li><a href="companies.html">Companies</a></li>
 
-      <button onclick="appendValue('4')">4</button>
-      <button onclick="appendValue('5')">5</button>
-      <button onclick="appendValue('6')">6</button>
-      <button onclick="appendValue('-')" class="operator">−</button>
+      <li><a href="login.html">Login</a></li>
 
-      <button onclick="appendValue('1')">1</button>
-      <button onclick="appendValue('2')">2</button>
-      <button onclick="appendValue('3')">3</button>
-      <button onclick="appendValue('+')" class="operator">+</button>
+    </ul>
 
-      <button onclick="appendValue('0')" class="zero">0</button>
-      <button onclick="appendValue('.')">.</button>
-      <button onclick="calculate()" class="equal">=</button>
+  </nav>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <h1>Find Your Dream Job</h1>
+
+    <p>
+      Search thousands of jobs and build your career
+      with top companies.
+    </p>
+
+    <!-- SEARCH BAR -->
+
+    <div class="search-box">
+
+      <input type="text" placeholder="Search jobs...">
+
+      <button>Search</button>
 
     </div>
 
-  </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- FEATURED JOBS -->
+
+  <section class="jobs-section">
+
+    <h2>Featured Jobs</h2>
+
+    <div class="jobs-container">
+
+      <!-- JOB CARD -->
+
+      <div class="job-card">
+
+        <h3>Frontend Developer</h3>
+
+        <p>Company: Google</p>
+
+        <p>Location: Pune</p>
+
+        <p>Salary: ₹40,000/month</p>
+
+        <a href="apply.html">
+    <button>Apply Now</button>
+</a>
+
+      </div>
+
+      <!-- JOB CARD -->
+
+      <div class="job-card">
+
+        <h3>Backend Developer</h3>
+
+        <p>Company: Microsoft</p>
+
+        <p>Location: Mumbai</p>
+
+        <p>Salary: ₹55,000/month</p>
+
+        <a href="apply.html">
+    <button>Apply Now</button>
+</a>
+
+      </div>
+
+      <!-- JOB CARD -->
+
+      <div class="job-card">
+
+        <h3>UI/UX Designer</h3>
+
+        <p>Company: Adobe</p>
+
+        <p>Location: Bangalore</p>
+
+        <p>Salary: ₹35,000/month</p>
+
+        <a href="apply.html">
+    <button>Apply Now</button>
+</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 JobBoard | All Rights Reserved
+    </p>
+
+  </footer>
+<script src="script.js"></script>
 
 </body>
 

@@ -1,43 +1,30 @@
-const display = document.getElementById("display");
+/* SEARCH FUNCTION */
 
-/* ADD VALUES */
+const searchInput = document.querySelector(".search-box input");
 
-function appendValue(value){
+const jobCards = document.querySelectorAll(".job-card");
 
-  display.value += value;
+searchInput.addEventListener("keyup", function(){
 
-}
+  const searchValue = searchInput.value.toLowerCase();
 
-/* CLEAR DISPLAY */
+  jobCards.forEach(function(card){
 
-function clearDisplay(){
+    const jobTitle =
+    card.querySelector("h3").textContent.toLowerCase();
 
-  display.value = "";
+    if(jobTitle.includes(searchValue)){
 
-}
+      card.style.display = "block";
 
-/* DELETE LAST VALUE */
+    }
 
-function deleteLast(){
+    else{
 
-  display.value = display.value.slice(0, -1);
+      card.style.display = "none";
 
-}
+    }
 
-/* CALCULATE */
+  });
 
-function calculate(){
-
-  try{
-
-    display.value = eval(display.value);
-
-  }
-
-  catch{
-
-    display.value = "Error";
-
-  }
-
-}
+});
